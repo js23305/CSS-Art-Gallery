@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffd6e0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title Styling */
+.title {
+    font-size: 36px;
+    color: #ff69b4;
+    text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.5);
+    margin-top: 20px;
+}
+
+/* Art Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Art Box */
+.art-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(255, 20, 147, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.art-box:hover {
+    transform: scale(1.1);
+}
+
+.art {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+}
+
+/* ❤️ Heart Art */
+.art-heart::before,
+.art-heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background: #ff69b4;
+    border-radius: 50px 50px 0 0;
+    top: 0;
+}
+.art-heart::before {
+    left: 25px;
+    transform: rotate(-45deg);
+}
+.art-heart::after {
+    left: -25px;
+    transform: rotate(45deg);
+}
+
+/* 😊 Smiley Face */
+.art-smile {
+    background: yellow;
+    border-radius: 50%;
+}
+.art-smile::before, .art-smile::after {
+    content: "";
+    position: absolute;
+    background: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 30%;
+}
+.art-smile::before {
+    left: 25px;
+}
+.art-smile::after {
+    right: 25px;
+}
+.art-smile::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: transparent;
+    border-bottom: 5px solid black;
+    border-radius: 50px;
+    bottom: 15px;
+    left: 25px;
+}
+
+/* 🌼 Simple Flower */
+.art-flower::before,
+.art-flower::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: pink;
+    border-radius: 50%;
+}
+.art-flower::before {
+    top: -25px;
+    left: 25px;
+}
+.art-flower::after {
+    top: 25px;
+    left: 25px;
+}
+
+/* ☁️ Fluffy Cloud */
+.art-cloud {
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.art-cloud::before, .art-cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+.art-cloud::before {
+    width: 50px;
+    height: 50px;
+    left: -30px;
+    top: 10px;
+}
+.art-cloud::after {
+    width: 70px;
+    height: 70px;
+    left: 30px;
+    top: -10px;
+}
+
+/* 🌙 Crescent Moon */
+.art-moon {
+    background: yellow;
+    border-radius: 50%;
+}
+.art-moon::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #ffd6e0;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+}
