@@ -73,7 +73,8 @@ body {
     border-radius: 50%; /* Makes it circle */
 }
 
-.art-smile::before, .art-smile::after {
+.art-smile::before, 
+.art-smile::after {
     content: ""; /* Creates two pseudo-elements for eyes */
     position: absolute; /* Positions them relative to the face */
     background: black;  /* Sets eye color */
@@ -88,18 +89,28 @@ body {
 }
 
 .art-smile::after {
-    position: 50px; /* Moves right eye into position */
+    left: 60px; /* Moves right eye into position */
 }
 
 .art-smile::after {
     content: "";  
-    position: 50px; /* Sets mouth width */ 
+    width: 40px; /* Sets mouth width */ 
     height: 20px; /* Sets mouth height */ 
-    background: transparent; /* Transparent background */
     border-bottom: 5px solid black; /* Creates a curved smile */
     border-radius: 50px; /* Rounds the smile */
-    bottom: 15px; /* Positions the smile */
-    left: 24px; /* Centers it */
+    background: transparent;
+    position: absolute;
+    bottom: 10px; /* Positions the smile */
+    left: 20px; /* Centers it */
+}
+
+.art-flower {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: yellow; /* Flower center */
+    border-radius: 50%;
+    margin: auto;
 }
 
 /* 🌼 Simple Flower */
@@ -114,13 +125,13 @@ body {
 }
 
 .art-flower::before {
-    top: -25px; /* Moves it up */
-    left: 25px; /* Centers it horizontally */
+    top: -40px; /* Moves it up */
+    left: 0; /* Centers it horizontally */
 }
 
 .art-flower::after {
-    top: 25px; /* Moves it down */
-    left: 25px; /* Centers it horizontally */
+    top: 40px; /* Moves it down */
+    left: 0; /* Centers it horizontally */
 }
 
 /* ☁️ Fluffy Cloud */
@@ -154,8 +165,12 @@ body {
 }
 /*🌙 Crescent Moon */
 .art-moon {
-    background: yellow; /* Sets moon color */
-    border-radius: 50%; /* Makes it circular*/
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: -10px 10px 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .art-moon::before {
