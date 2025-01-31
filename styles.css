@@ -48,59 +48,123 @@ body {
 /* ❤️ Heart Art */
 .art-heart::before,
 .art-heart::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 80px;
-    background: #ff69b4;
-    border-radius: 50px 50px 0 0;
-    top: 0;
+    content: ""; /* Creates two pseudo-elements */
+    position: absolute; /* Positions them relative to the parent */
+    width: 50px; /* Sets width */
+    height: 80px; /* Sets height */
+    background: #ff69b4; /* Sets pinl color */
+    border-radius: 50px 50px 0 0; /* Creates rounded top edges */
+    top: 0; /* Aligns to the top */
 }
 
 .art-heart::before {
-    left: 25px;
-    transform: rotate(-45deg);
+    left: 25px; /* Moves to the right */
+    transform: rotate(-45deg); /* Rotates to create the heart shape */
 }
 
 .art-heart::after {
-    left: -25px;
-    transform: rotate(45deg);
+    left: -25px; /* Moves to the left */
+    transform: rotate(45deg); /* Rotates to complete the heart shape*/
 }
 
 /* 😊 Smiley Face*/
 .art-smile {
-    background: yellow;
-    border-radius: 50%;
+    background: yellow; /* Makes it yellow */
+    border-radius: 50%; /* Makes it circle */
 }
 
 .art-smile::before, .art-smile::after {
-    content: "";
-    position: absolute;
-    background: black;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 30%;
+    content: ""; /* Creates two pseudo-elements for eyes */
+    position: absolute; /* Positions them relative to the face */
+    background: black;  /* Sets eye color */
+    width: 10px; /* Sets eye size */
+    height: 10px; /* Sets eye size */
+    border-radius: 50%; /* Makes them circular */
+    top: 30%; /* Positions eyes slightly down */
 }
 
 .art-smile::before {
-    left: 25px;
+    left: 25px; /* Moves left eye into position */
 }
 
 .art-smile::after {
-    right: 25px;
+    position: 50px; /* Moves right eye into position */
 }
 
 .art-smile::after {
+    content: "";  
+    position: 50px; /* Sets mouth width */ 
+    height: 20px; /* Sets mouth height */ 
+    background: transparent; /* Transparent background */
+    border-bottom: 5px solid black; /* Creates a curved smile */
+    border-radius: 50px; /* Rounds the smile */
+    bottom: 15px; /* Positions the smile */
+    left: 24px; /* Centers it */
+}
+
+/* 🌼 Simple Flower */
+.art-flower::before,
+.art-flower::after {
+    content: ""; /* Creates petals */
+    position: absolute; /* Positions them */
+    width: 50px; /* Sets petal size */
+    height: 50px; /* Sets petal size */
+    background: pink; /* Sets petal color */
+    border-radius: 50%; /* Makes them circular */
+}
+
+.art-flower::before {
+    top: -25px; /* Moves it up */
+    left: 25px; /* Centers it horizontally */
+}
+
+.art-flower::after {
+    top: 25px; /* Moves it down */
+    left: 25px; /* Centers it horizontally */
+}
+
+/* ☁️ Fluffy Cloud */
+.art-cloud {
+    background: white; /* Sets cloud color */
+    border-radius: 50%; /* Makesit round */
+    width: 60px; /* Sets cloud width */
+    height: 60px; /* Sets cloud height */
+}
+
+.art-cloud::before {
     content: "";
-    position: 50px;
-    height: 20px;
-    background: transparent;
-    border-bottom: 5px solid black;
-    border-radius: 50px;
-    bottom: 15px;
-    left: 24px;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: -30px;
+    top: 10px;
 }
 
+.art-cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    left: 30px;
+    top: -10px;
+}
+/*🌙 Crescent Moon */
+.art-moon {
+    background: yellow; /* Sets moon color */
+    border-radius: 50%; /* Makes it circular*/
+}
 
-
+.art-moon::before {
+    content: "";
+    position: absolute;
+    width: 60px; /* Sets size */
+    height: 60px; /* Sets size */
+    background: #ffd6e0;  /* Light pink color to create crescent effect */
+    border-radius: 50%; /* Makes it round */
+    top: 10px; /* Moves it slightly down */
+    left: 10px; /* Moves it slightly right */
+}
